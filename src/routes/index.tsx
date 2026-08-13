@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import heroImage from "@/assets/nbh-hero.jpg";
+import heroAsset from "@/assets/nbh-bg.jpg.asset.json";
 
 /* ============================================================
  * NBH — CONFIGURATION (edit here only)
@@ -101,8 +101,8 @@ function Index() {
       <div className="absolute inset-0">
         <div className="nbh-drift h-full w-full">
           <img
-            src={heroImage}
-            alt="Dancers moving together at an Afrohouse night in Nairobi"
+            src={heroAsset.url}
+            alt="Afrofuturist collage of a split face over golden desert dunes"
             width={1920}
             height={1280}
             className="nbh-fade h-full w-full object-cover"
@@ -142,8 +142,8 @@ function Index() {
       {/* Hero */}
       <section className="relative z-10 flex h-full flex-col items-center justify-end px-5 pb-10 text-center sm:justify-center sm:pb-0">
         <h1
-          className="nbh-rise font-display leading-[0.86] font-extrabold tracking-[-0.02em] text-ivory"
-          style={{ animationDelay: "0.8s", fontSize: "clamp(3rem, 11.5vw, 9.5rem)" }}
+          className="nbh-rise font-dune leading-[0.95] tracking-[0.01em] text-ivory"
+          style={{ animationDelay: "0.8s", fontSize: "clamp(2.4rem, 9vw, 7.5rem)" }}
         >
           <span className="block">NOTHING</span>
           <span className="block text-orange/90">BUT</span>

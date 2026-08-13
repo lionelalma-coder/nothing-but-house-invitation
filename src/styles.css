@@ -8,6 +8,13 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: "Dune Rise";
+  src: url("/__l5e/assets-v1/a7f5a38c-86c1-4ff5-a5f2-9be78577c6d6/Dune_Rise.otf") format("opentype");
+  font-weight: 400;
+  font-display: swap;
+}
+
 /*
  * Design system definition.
  *
@@ -64,6 +71,7 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   --font-display: "Aileron", system-ui, sans-serif;
+  --font-dune: "Dune Rise", "Aileron", system-ui, sans-serif;
   --font-sans: "Hanken Grotesk Variable", system-ui, sans-serif;
   --color-ink: var(--ink);
   --color-ivory: var(--ivory);
@@ -163,6 +171,10 @@
 
 @utility font-display {
   font-family: var(--font-display);
+}
+
+@utility font-dune {
+  font-family: var(--font-dune);
 }
 
 @keyframes nbh-rise {
