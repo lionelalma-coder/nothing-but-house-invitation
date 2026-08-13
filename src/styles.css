@@ -1,6 +1,10 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
+@import "@fontsource/aileron/400.css";
+@import "@fontsource/aileron/700.css";
+@import "@fontsource/aileron/800.css";
+@import "@fontsource-variable/hanken-grotesk";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -59,12 +63,24 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --font-display: "Aileron", system-ui, sans-serif;
+  --font-sans: "Hanken Grotesk Variable", system-ui, sans-serif;
+  --color-ink: var(--ink);
+  --color-ivory: var(--ivory);
+  --color-orange: var(--nbh-orange);
+  --color-orange-soft: var(--nbh-orange-soft);
+  --color-red: var(--nbh-red);
 }
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --ink: oklch(0.145 0 0);
+  --ivory: oklch(0.963 0.011 84.6);
+  --nbh-orange: oklch(0.723 0.181 51.6);
+  --nbh-orange-soft: oklch(0.798 0.139 65.5);
+  --nbh-red: oklch(0.61 0.238 31.5);
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.963 0.011 84.6);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
