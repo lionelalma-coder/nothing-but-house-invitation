@@ -99,13 +99,15 @@ function Index() {
     <main className="relative h-[100svh] w-full overflow-hidden bg-ink">
       {/* Background */}
       <div className="absolute inset-0">
-        <img
-          src={heroImage}
-          alt="Dancers moving together at an Afrohouse night in Nairobi"
-          width={1920}
-          height={1280}
-          className="nbh-fade nbh-drift h-full w-full object-cover"
-        />
+        <div className="nbh-drift h-full w-full">
+          <img
+            src={heroImage}
+            alt="Dancers moving together at an Afrohouse night in Nairobi"
+            width={1920}
+            height={1280}
+            className="nbh-fade h-full w-full object-cover"
+          />
+        </div>
         <div className="absolute inset-0 bg-ink/40" />
         <div className="absolute inset-0 bg-gradient-to-b from-ink/55 via-ink/10 to-ink/80" />
         <div
