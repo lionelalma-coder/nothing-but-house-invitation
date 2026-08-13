@@ -106,11 +106,11 @@ function Index() {
           height={1280}
           className="nbh-fade nbh-drift h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-ink/65" />
-        <div className="absolute inset-0 bg-gradient-to-b from-ink/80 via-ink/25 to-ink/95" />
+        <div className="absolute inset-0 bg-ink/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-ink/55 via-ink/10 to-ink/80" />
         <div
           className="absolute inset-0"
-          style={{ boxShadow: "inset 0 0 220px 60px var(--ink)" }}
+          style={{ boxShadow: "inset 0 0 180px 30px color-mix(in oklab, var(--ink) 85%, transparent)" }}
         />
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.14] mix-blend-overlay"
@@ -141,7 +141,7 @@ function Index() {
       <section className="relative z-10 flex h-full flex-col items-center justify-end px-5 pb-10 text-center sm:justify-center sm:pb-0">
         <h1
           className="nbh-rise font-display leading-[0.86] font-extrabold tracking-[-0.02em] text-ivory"
-          style={{ animationDelay: "0.8s", fontSize: "clamp(3.2rem, 13vw, 11rem)" }}
+          style={{ animationDelay: "0.8s", fontSize: "clamp(3rem, 11.5vw, 9.5rem)" }}
         >
           <span className="block">NOTHING</span>
           <span className="block text-orange/90">BUT</span>
@@ -181,7 +181,7 @@ function Index() {
         </div>
 
         <div
-          className="nbh-rise mt-8 space-y-1 text-[8px] tracking-[0.34em] text-ivory/40 sm:absolute sm:bottom-8 sm:mt-0 sm:text-[10px]"
+          className="nbh-rise mt-8 space-y-1 text-[8px] tracking-[0.34em] text-ivory/55 sm:absolute sm:bottom-6 sm:mt-0 sm:text-[10px]"
           style={{ animationDelay: "2s" }}
         >
           <p>CURATED AFROHOUSE EXPERIENCES</p>
