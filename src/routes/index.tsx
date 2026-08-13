@@ -97,7 +97,7 @@ function Countdown() {
 
 function Index() {
   return (
-    <main className="relative h-[100svh] w-full overflow-hidden bg-ink">
+    <main className="relative min-h-[100svh] w-full overflow-x-hidden bg-ink">
       {/* Background */}
       <div className="absolute inset-0">
         <div className="nbh-drift h-full w-full">
@@ -147,7 +147,7 @@ function Index() {
       </header>
 
       {/* Hero */}
-      <section className="relative z-10 flex h-full flex-col items-center justify-end px-5 pb-10 text-center sm:justify-center sm:pb-0">
+      <section className="relative z-10 flex min-h-[100svh] flex-col items-center justify-center px-5 pt-28 pb-16 text-center sm:pt-32 sm:pb-24">
         <h1
           className="nbh-rise font-dune leading-[0.95] tracking-[0.01em] text-ivory"
           style={{ animationDelay: "0.8s", fontSize: "clamp(2.4rem, 9vw, 7.5rem)" }}
