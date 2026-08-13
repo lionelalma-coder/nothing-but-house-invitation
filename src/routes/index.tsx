@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import heroAsset from "@/assets/nbh-bg.jpg.asset.json";
 import logoAsset from "@/assets/nbh-logo.png.asset.json";
+import wordmarkAsset from "@/assets/nbh-wordmark.png.asset.json";
 
 /* ============================================================
  * NBH — CONFIGURATION (edit here only)
@@ -148,13 +149,15 @@ function Index() {
 
       {/* Hero */}
       <section className="relative z-10 flex min-h-[100svh] flex-col items-center justify-center px-5 pt-28 pb-16 text-center sm:pt-32 sm:pb-24">
-        <h1
-          className="nbh-rise font-dune leading-[0.95] tracking-[0.01em] text-ivory"
-          style={{ animationDelay: "0.8s", fontSize: "clamp(2.4rem, 9vw, 7.5rem)" }}
-        >
-          <span className="block">NOTHING</span>
-          <span className="block text-orange/90">BUT</span>
-          <span className="block">HOUSE</span>
+        <h1 className="nbh-rise w-full" style={{ animationDelay: "0.8s" }}>
+          <span className="sr-only">Nothing But House</span>
+          <img
+            src={wordmarkAsset.url}
+            alt="Nothing But House"
+            width={1067}
+            height={529}
+            className="mx-auto h-auto w-[min(88vw,720px)] select-none drop-shadow-[0_10px_40px_rgba(0,0,0,0.45)] lg:w-[860px]"
+          />
         </h1>
 
         <p
