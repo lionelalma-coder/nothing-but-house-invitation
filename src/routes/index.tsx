@@ -1,12 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import heroAsset from "@/assets/nbh-bg.jpg.asset.json";
+import logoAsset from "@/assets/nbh-logo.png.asset.json";
 
 /* ============================================================
  * NBH — CONFIGURATION (edit here only)
  * ==========================================================*/
 const EVENT_DATE = "2026-11-28T20:00:00";
-const TICKET_URL = "YOUR_TICKET_LINK";
+const TICKET_URL = "https://mookh.com";
 const EVENT_LOCATION = "NAIROBI • KENYA";
 const EVENT_DATE_LABEL = "NOVEMBER 2026";
 /* ==========================================================*/
@@ -128,11 +129,17 @@ function Index() {
         className="nbh-rise absolute top-0 right-0 left-0 z-10 flex items-center justify-between px-5 py-5 sm:px-10 sm:py-7"
         style={{ animationDelay: "0.4s" }}
       >
-        <a href="/" className="font-display text-xl font-extrabold tracking-[0.3em] text-ivory">
-          NBH
+        <a href="/" aria-label="Nothing But House home" className="inline-flex items-center">
+          <img
+            src={logoAsset.url}
+            alt="NBH monogram logo"
+            className="h-11 w-auto invert sm:h-14"
+          />
         </a>
         <a
           href={TICKET_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="rounded-full border border-ivory/40 px-4 py-2 text-[10px] tracking-[0.25em] text-ivory transition-all duration-300 hover:border-orange hover:text-orange sm:px-6 sm:text-xs"
         >
           GET TICKETS
@@ -173,6 +180,8 @@ function Index() {
         <div className="nbh-rise mt-9 sm:mt-12" style={{ animationDelay: "1.75s" }}>
           <a
             href={TICKET_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block rounded-full border border-ivory bg-ivory px-10 py-4 font-display text-xs font-bold tracking-[0.3em] text-ink transition-all duration-300 hover:scale-[1.04] hover:border-orange hover:bg-orange-soft sm:px-14 sm:text-sm"
           >
             GET TICKETS
