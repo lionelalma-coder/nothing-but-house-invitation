@@ -74,12 +74,12 @@
 
 :root {
   --radius: 0.625rem;
-  --ink: oklch(0.145 0 0);
+  --ink: oklch(0.11 0 0);
   --ivory: oklch(0.963 0.011 84.6);
   --nbh-orange: oklch(0.723 0.181 51.6);
   --nbh-orange-soft: oklch(0.798 0.139 65.5);
   --nbh-red: oklch(0.61 0.238 31.5);
-  --background: oklch(0.145 0 0);
+  --background: oklch(0.11 0 0);
   --foreground: oklch(0.963 0.011 84.6);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
@@ -156,5 +156,64 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+}
+
+@utility font-display {
+  font-family: var(--font-display);
+}
+
+@keyframes nbh-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes nbh-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes nbh-drift {
+  from {
+    transform: scale(1.08) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1.14) translate3d(0, -1.5%, 0);
+  }
+}
+
+@utility nbh-rise {
+  opacity: 0;
+  animation: nbh-rise 1.1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@utility nbh-fade {
+  opacity: 0;
+  animation: nbh-fade 1.6s ease forwards;
+}
+
+@utility nbh-drift {
+  animation: nbh-drift 40s ease-in-out infinite alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
