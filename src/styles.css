@@ -199,10 +199,10 @@
 
 @keyframes nbh-drift {
   from {
-    transform: scale3d(1.08, 1.08, 1) translate3d(0, 0, 0);
+    transform: scale3d(1.25, 1.25, 1) translate3d(0, 0, 0);
   }
   to {
-    transform: scale3d(1.14, 1.14, 1) translate3d(0, -1.5%, 0);
+    transform: scale3d(1.35, 1.35, 1) translate3d(0, -1.5%, 0);
   }
 }
 
