@@ -216,6 +216,8 @@
 @utility nbh-fade {
   opacity: 0;
   will-change: opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
   animation: nbh-fade 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
