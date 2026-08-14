@@ -199,10 +199,19 @@
 
 @keyframes nbh-drift {
   from {
-    transform: scale3d(1.02, 1.02, 1) translate3d(0, 0, 0);
+    transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
   }
   to {
-    transform: scale3d(1.06, 1.06, 1) translate3d(0, -1.5%, 0);
+    transform: scale3d(1.03, 1.03, 1) translate3d(0.5%, -1%, 0);
+  }
+}
+
+@keyframe nbh-float {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, -12px, 0) scale(1.03);
   }
 }
 
@@ -227,6 +236,14 @@
   backface-visibility: hidden;
   animation: nbh-drift 60s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
 }
+
+@utility nbh-float {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  animation: nbh-float 8s ease-in-out infinite;
+}
+
 
 @media (prefers-reduced-motion: reduce) {
   *,
