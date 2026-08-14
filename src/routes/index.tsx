@@ -7,7 +7,9 @@ import wordmarkAsset from "@/assets/nbh-wordmark.png.asset.json";
 /* ============================================================
  * NBH — CONFIGURATION (edit here only)
  * ==========================================================*/
-const EVENT_DATE = "2026-11-28T20:00:00";
+/* Event start in Nairobi time (UTC+3) — explicit offset keeps the countdown
+   accurate for visitors in every timezone. */
+const EVENT_DATE = "2026-11-28T20:00:00+03:00";
 const TICKET_URL = "https://mookh.com";
 const EVENT_LOCATION = "NAIROBI • KENYA";
 const EVENT_DATE_LABEL = "NOVEMBER 2026";
@@ -89,14 +91,14 @@ function Countdown() {
       {units.map((u, i) => (
         <div
           key={u.label}
-          className={`flex min-w-[68px] flex-col items-center px-3 sm:min-w-[104px] sm:px-6 ${
+          className={`group flex min-w-[68px] transform-gpu flex-col items-center px-3 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 sm:min-w-[104px] sm:px-6 ${
             i > 0 ? "border-l border-ivory/20" : ""
           }`}
         >
-          <span className="font-display text-3xl leading-none font-bold tabular-nums text-ivory sm:text-5xl lg:text-6xl [transform:translateZ(0)]">
+          <span className="font-display text-3xl leading-none font-bold tabular-nums text-ivory transition-colors duration-300 group-hover:text-orange-soft sm:text-5xl lg:text-6xl [transform:translateZ(0)]">
             {String(u.value).padStart(2, "0")}
           </span>
-          <span className="mt-2 text-[9px] tracking-[0.28em] text-orange sm:text-[11px] sm:tracking-[0.35em]">
+          <span className="mt-2 text-[9px] tracking-[0.28em] text-orange transition-colors duration-300 group-hover:text-ivory sm:text-[11px] sm:tracking-[0.35em]">
             {u.label}
           </span>
         </div>
@@ -116,17 +118,22 @@ function Index() {
             alt="Afrofuturist collage of a split face over golden desert dunes"
             width={1920}
             height={1280}
-            className="nbh-fade h-full w-full object-cover"
+            loading="eager"
+            decoding="sync"
+            fetchPriority="high"
+            sizes="100vw"
+            className="nbh-fade h-full w-full object-cover object-center [image-rendering:high-quality]"
+            style={{ imageRendering: "auto", filter: "contrast(1.06) saturate(1.08)" }}
           />
         </div>
-        <div className="absolute inset-0 bg-ink/40" />
-        <div className="absolute inset-0 bg-gradient-to-b from-ink/55 via-ink/10 to-ink/80" />
+        <div className="absolute inset-0 bg-ink/30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-ink/50 via-ink/5 to-ink/75" />
         <div
           className="absolute inset-0"
           style={{ boxShadow: "inset 0 0 180px 30px color-mix(in oklab, var(--ink) 85%, transparent)" }}
         />
         <div
-          className="pointer-events-none absolute inset-0 opacity-[0.14] mix-blend-overlay"
+          className="pointer-events-none absolute inset-0 opacity-[0.09] mix-blend-overlay"
           style={{
             backgroundImage:
               "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/></filter><rect width='140' height='140' filter='url(%23n)' opacity='0.55'/></svg>\")",
@@ -150,7 +157,8 @@ function Index() {
           href={TICKET_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-full border border-ivory/40 px-4 py-2 text-[10px] tracking-[0.25em] text-ivory transition-all duration-300 hover:border-orange hover:text-orange sm:px-6 sm:text-xs"
+          aria-label="Get tickets on Mookh"
+          className="transform-gpu rounded-full border border-ivory/40 px-4 py-2 text-[10px] tracking-[0.25em] text-ivory transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-0.5 hover:scale-[1.05] hover:border-orange hover:bg-orange/10 hover:text-orange hover:shadow-[0_10px_30px_-10px_var(--nbh-orange)] active:scale-[0.98] sm:px-6 sm:text-xs"
         >
           GET TICKETS
         </a>
@@ -194,7 +202,8 @@ function Index() {
             href={TICKET_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block rounded-full border border-ivory bg-ivory px-10 py-4 font-display text-xs font-bold tracking-[0.3em] text-ink transition-all duration-300 hover:scale-[1.04] hover:border-orange hover:bg-orange-soft sm:px-14 sm:text-sm"
+            aria-label="Get tickets on Mookh"
+            className="inline-block transform-gpu rounded-full border border-ivory bg-ivory px-10 py-4 font-display text-xs font-bold tracking-[0.3em] text-ink transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 hover:scale-[1.05] hover:border-orange hover:bg-orange-soft hover:shadow-[0_18px_45px_-15px_var(--nbh-orange)] active:translate-y-0 active:scale-[0.98] sm:px-14 sm:text-sm"
           >
             GET TICKETS
           </a>
