@@ -143,7 +143,7 @@ function Index() {
 
       {/* Top bar */}
       <header
-        className="nbh-rise absolute top-0 right-0 left-0 z-10 flex items-center justify-between px-5 py-5 sm:px-10 sm:py-7"
+        className="nbh-rise absolute top-0 right-0 left-0 z-30 flex items-center justify-between px-5 py-5 sm:px-10 sm:py-7"
         style={{ animationDelay: "0.4s" }}
       >
         <a href="/" aria-label="Nothing But House home" className="inline-flex items-center">
