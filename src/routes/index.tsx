@@ -139,7 +139,39 @@ function Index() {
               "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/></filter><rect width='140' height='140' filter='url(%23n)' opacity='0.55'/></svg>\")",
           }}
         />
+        {/* Motion background — soft floating orbs */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div
+            className="nbh-float absolute -top-20 -left-20 h-[40vw] max-h-[520px] min-h-[260px] w-[40vw] max-w-[520px] min-w-[260px] rounded-full opacity-[0.14] blur-[90px]"
+            style={{
+              background: "radial-gradient(circle, var(--nbh-orange) 0%, transparent 70%)",
+              animationDelay: "0s",
+            }}
+          />
+          <div
+            className="nbh-float absolute top-1/4 -right-24 h-[32vw] max-h-[420px] min-h-[200px] w-[32vw] max-w-[420px] min-w-[200px] rounded-full opacity-[0.10] blur-[80px]"
+            style={{
+              background: "radial-gradient(circle, var(--nbh-orange-soft) 0%, transparent 70%)",
+              animationDelay: "-2.5s",
+            }}
+          />
+          <div
+            className="nbh-float absolute bottom-0 left-1/4 h-[36vw] max-h-[480px] min-h-[240px] w-[36vw] max-w-[480px] min-w-[240px] rounded-full opacity-[0.08] blur-[100px]"
+            style={{
+              background: "radial-gradient(circle, var(--nbh-red) 0%, transparent 70%)",
+              animationDelay: "-5s",
+            }}
+          />
+          <div
+            className="nbh-float absolute top-1/2 left-1/2 h-[28vw] max-h-[360px] min-h-[180px] w-[28vw] max-w-[360px] min-w-[180px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-[0.06] blur-[110px]"
+            style={{
+              background: "radial-gradient(circle, var(--ivory) 0%, transparent 70%)",
+              animationDelay: "-1.2s",
+            }}
+          />
+        </div>
       </div>
+
 
       {/* Top bar */}
       <header
