@@ -54,8 +54,17 @@ function Countdown() {
   useEffect(() => {
     setMounted(true);
     setTime(getRemaining());
-    const id = setInterval(() => setTime(getRemaining()), 1000);
-    return () => clearInterval(id);
+    let frame = 0;
+    let last = 0;
+    const tick = (now: number) => {
+      if (now - last >= 1000) {
+        last = now;
+        setTime(getRemaining());
+      }
+      frame = requestAnimationFrame(tick);
+    };
+    frame = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(frame);
   }, []);
 
   if (!mounted) return <div className="h-[72px] sm:h-[92px]" aria-hidden />;
@@ -84,7 +93,7 @@ function Countdown() {
             i > 0 ? "border-l border-ivory/20" : ""
           }`}
         >
-          <span className="font-display text-3xl leading-none font-bold tabular-nums text-ivory sm:text-5xl lg:text-6xl">
+          <span className="font-display text-3xl leading-none font-bold tabular-nums text-ivory sm:text-5xl lg:text-6xl [transform:translateZ(0)]">
             {String(u.value).padStart(2, "0")}
           </span>
           <span className="mt-2 text-[9px] tracking-[0.28em] text-orange sm:text-[11px] sm:tracking-[0.35em]">
@@ -156,7 +165,7 @@ function Index() {
             alt="Nothing But House"
             width={1067}
             height={529}
-            className="mx-auto h-auto w-[min(86vw,560px)] select-none drop-shadow-[0_10px_40px_rgba(0,0,0,0.45)] lg:w-[680px]"
+            className="mx-auto h-auto w-[min(60vw,392px)] transform-gpu select-none drop-shadow-[0_10px_40px_rgba(0,0,0,0.45)] [backface-visibility:hidden] lg:w-[476px]"
           />
         </h1>
 
