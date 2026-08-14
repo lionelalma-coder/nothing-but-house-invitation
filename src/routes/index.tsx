@@ -7,7 +7,9 @@ import wordmarkAsset from "@/assets/nbh-wordmark.png.asset.json";
 /* ============================================================
  * NBH — CONFIGURATION (edit here only)
  * ==========================================================*/
-const EVENT_DATE = "2026-11-28T20:00:00";
+/* Event start in Nairobi time (UTC+3) — explicit offset keeps the countdown
+   accurate for visitors in every timezone. */
+const EVENT_DATE = "2026-11-28T20:00:00+03:00";
 const TICKET_URL = "https://mookh.com";
 const EVENT_LOCATION = "NAIROBI • KENYA";
 const EVENT_DATE_LABEL = "NOVEMBER 2026";
