@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: "Dune Rise";
-  src: url("/__l5e/assets-v1/a7f5a38c-86c1-4ff5-a5f2-9be78577c6d6/Dune_Rise.otf") format("opentype");
+  src: url("/attached_assets/dune-rise.otf") format("opentype");
   font-weight: 400;
   font-display: swap;
 }
