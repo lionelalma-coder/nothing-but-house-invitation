@@ -5,6 +5,13 @@
 @import "@fontsource/aileron/700.css";
 @import "@fontsource/aileron/800.css";
 @import "@fontsource-variable/hanken-grotesk";
+@import "@fontsource/space-grotesk/400.css";
+@import "@fontsource/space-grotesk/500.css";
+@import "@fontsource/space-grotesk/600.css";
+@import "@fontsource/space-grotesk/700.css";
+@import "@fontsource/dm-sans/400.css";
+@import "@fontsource/dm-sans/500.css";
+@import "@fontsource/dm-sans/700.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -72,7 +79,8 @@
   --color-sidebar-ring: var(--sidebar-ring);
   --font-display: "Aileron", system-ui, sans-serif;
   --font-dune: "Dune Rise", "Aileron", system-ui, sans-serif;
-  --font-sans: "Hanken Grotesk Variable", system-ui, sans-serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-grotesk: "Space Grotesk", system-ui, sans-serif;
   --color-ink: var(--ink);
   --color-ivory: var(--ivory);
   --color-orange: var(--nbh-orange);
@@ -175,6 +183,39 @@
 
 @utility font-dune {
   font-family: var(--font-dune);
+}
+
+@utility font-grotesk {
+  font-family: var(--font-grotesk);
+}
+
+@utility nbh-grain {
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0.07;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/></filter><rect width='140' height='140' filter='url(%23n)' opacity='0.55'/></svg>");
+  }
+}
+
+@utility nbh-delay-1 {
+  animation-delay: 0.15s;
+}
+
+@utility nbh-delay-2 {
+  animation-delay: 0.3s;
+}
+
+@utility nbh-delay-3 {
+  animation-delay: 0.45s;
+}
+
+@utility nbh-delay-4 {
+  animation-delay: 0.6s;
 }
 
 @keyframes nbh-rise {
