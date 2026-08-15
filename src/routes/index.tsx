@@ -1,8 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import heroAsset from "@/assets/nbh-bg.jpg.asset.json";
-import logoAsset from "@/assets/nbh-logo.png.asset.json";
-import wordmarkAsset from "@/assets/nbh-wordmark.png.asset.json";
+
+/* Images live in public/attached_assets so they resolve on any host */
+const heroSrc = "/attached_assets/nbh-bg.jpg";
+const logoSrc = "/attached_assets/nbh-logo.png";
+const wordmarkSrc = "/attached_assets/nbh-wordmark.png";
 
 /* ============================================================
  * NBH — CONFIGURATION (edit here only)
@@ -114,7 +116,7 @@ function Index() {
       <div className="absolute inset-0">
         <div className="nbh-drift h-full w-full">
           <img
-            src={heroAsset.url}
+            src={heroSrc}
             alt="Afrofuturist collage of a split face over golden desert dunes"
             width={1920}
             height={1280}
@@ -180,7 +182,7 @@ function Index() {
       >
         <a href="/" aria-label="Nothing But House home" className="inline-flex items-center">
           <img
-            src={logoAsset.url}
+            src={logoSrc}
             alt="NBH monogram logo"
             className="h-11 w-auto invert sm:h-14"
           />
@@ -201,7 +203,7 @@ function Index() {
         <h1 className="nbh-rise w-full" style={{ animationDelay: "0.8s" }}>
           <span className="sr-only">Nothing But House</span>
           <img
-            src={wordmarkAsset.url}
+            src={wordmarkSrc}
             alt="Nothing But House"
             width={1067}
             height={529}
