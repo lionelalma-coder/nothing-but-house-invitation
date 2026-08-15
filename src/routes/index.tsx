@@ -6,6 +6,37 @@ const heroSrc = "/attached_assets/nbh-bg.jpg";
 const logoSrc = "/attached_assets/nbh-logo.png";
 const wordmarkSrc = "/attached_assets/nbh-wordmark.png";
 
+const ARTISTS = [
+  {
+    n: "01",
+    name: "The Wanderer",
+    from: "Lisbon / Luanda",
+    grad: "radial-gradient(circle at 35% 28%, #FC8210, #111111 62%)",
+    offset: "",
+  },
+  {
+    n: "02",
+    name: "Azymuth",
+    from: "Nairobi / Global",
+    grad: "radial-gradient(circle at 65% 24%, #FCAD37, #111111 62%)",
+    offset: "lg:translate-y-12",
+  },
+  {
+    n: "03",
+    name: "Mphoza",
+    from: "Johannesburg",
+    grad: "radial-gradient(circle at 45% 72%, #FB2610, #111111 62%)",
+    offset: "",
+  },
+  {
+    n: "04",
+    name: "NBH Residents",
+    from: "The world",
+    grad: "radial-gradient(circle at 70% 60%, #F7F3ED, #111111 55%)",
+    offset: "",
+  },
+];
+
 /* ============================================================
  * NBH — CONFIGURATION (edit here only)
  * ==========================================================*/
