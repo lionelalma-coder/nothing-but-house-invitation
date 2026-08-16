@@ -9,15 +9,15 @@ const wordmarkSrc = "/attached_assets/nbh-wordmark.png";
 const ARTISTS = [
   {
     n: "01",
-    name: "The Wanderer",
-    from: "Lisbon / Luanda",
+    name: "THE MOB HOUSE DJS",
+    from: "NAIROBI",
     grad: "radial-gradient(circle at 35% 28%, #FC8210, #111111 62%)",
     offset: "",
   },
   {
     n: "02",
-    name: "Azymuth",
-    from: "Nairobi / Global",
+    name: "MASSH",
+    from: "GLOBAL",
     grad: "radial-gradient(circle at 65% 24%, #FCAD37, #111111 62%)",
     offset: "lg:translate-y-12",
   },
