@@ -197,7 +197,7 @@ function Index() {
               <p className="nbh-rise mb-5 font-grotesk text-[10px] font-semibold tracking-[.32em] text-orange-soft">
                 RHYTHM, CULTURE AND CONNECTION
               </p>
-              <div className="nbh-rise nbh-delay-1 max-w-[680px] overflow-hidden">
+              <div className="nbh-rise nbh-delay-1 max-w-[408px] overflow-hidden">
                 <h1>
                   <span className="sr-only">Nothing But House</span>
                   <img
