@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import AmbientAudio from "@/components/AmbientAudio";
 
 /* Images live in public/attached_assets so they resolve on any host */
 const heroSrc = "/attached_assets/nbh-bg.jpg";
@@ -361,6 +362,7 @@ function Index() {
           </div>
         </div>
       </footer>
+      <AmbientAudio />
     </main>
   );
 }
