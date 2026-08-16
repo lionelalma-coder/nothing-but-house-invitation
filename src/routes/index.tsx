@@ -317,6 +317,50 @@ function Index() {
           </div>
         </div>
       </section>
+
+      {/* FOOTER */}
+      <footer className="border-t border-ivory/10 bg-ink/80 px-5 py-14 backdrop-blur-sm sm:px-9 sm:py-16 lg:px-14">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 md:flex-row md:items-start">
+          <div className="flex flex-col items-center gap-3 md:items-start">
+            <p className="font-sans text-[10px] tracking-[0.22em] text-ivory/55 uppercase">
+              © NOTHING BUT HOUSE — EST. 2026
+            </p>
+            <a
+              href="mailto:info@nothingbuthouse.events"
+              className="font-sans text-[10px] tracking-[0.18em] text-ivory/55 transition-colors duration-300 hover:text-orange-soft"
+            >
+              info@nothingbuthouse.events
+            </a>
+          </div>
+
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+            <a
+              href="https://www.instagram.com/nothingbuthse?igsh=NzllMGk0NjFzb2Nz&utm_source=qr"
+              target="_blank"
+              rel="noreferrer"
+              className="font-sans text-[10px] tracking-[0.18em] text-ivory/55 uppercase transition-colors duration-300 hover:text-orange-soft"
+            >
+              Instagram
+            </a>
+            <span className="hidden h-3 w-px bg-ivory/15 sm:block" />
+            <a
+              href="#"
+              onClick={(e) => e.preventDefault()}
+              className="font-sans text-[10px] tracking-[0.18em] text-ivory/55 uppercase transition-colors duration-300 hover:text-orange-soft"
+            >
+              Privacy
+            </a>
+            <span className="hidden h-3 w-px bg-ivory/15 sm:block" />
+            <a
+              href="#"
+              onClick={(e) => e.preventDefault()}
+              className="font-sans text-[10px] tracking-[0.18em] text-ivory/55 uppercase transition-colors duration-300 hover:text-orange-soft"
+            >
+              Terms
+            </a>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }
