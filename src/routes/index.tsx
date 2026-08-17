@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { Instagram } from "lucide-react";
 import AmbientAudio from "@/components/AmbientAudio";
 
 /* Images live in public/attached_assets so they resolve on any host */
@@ -10,24 +11,24 @@ const wordmarkSrc = "/attached_assets/nbh-wordmark.png";
 const ARTISTS = [
   {
     n: "01",
+    name: "Mphoza",
+    from: "Johannesburg",
+    grad: "radial-gradient(circle at 45% 72%, #FB2610, #111111 62%)",
+    offset: "",
+  },
+  {
+    n: "02",
     name: "THE MOB HOUSE DJS",
     from: "NAIROBI",
     grad: "radial-gradient(circle at 35% 28%, #FC8210, #111111 62%)",
     offset: "",
   },
   {
-    n: "02",
+    n: "03",
     name: "MASSH",
     from: "GLOBAL",
     grad: "radial-gradient(circle at 65% 24%, #FCAD37, #111111 62%)",
     offset: "lg:translate-y-12",
-  },
-  {
-    n: "03",
-    name: "Mphoza",
-    from: "Johannesburg",
-    grad: "radial-gradient(circle at 45% 72%, #FB2610, #111111 62%)",
-    offset: "",
   },
   {
     n: "04",
@@ -340,14 +341,33 @@ function Index() {
             </a>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-5 sm:gap-6">
             <a
               href="https://www.instagram.com/nothingbuthse?igsh=NzllMGk0NjFzb2Nz&utm_source=qr"
               target="_blank"
               rel="noreferrer"
-              className="font-sans text-[10px] tracking-[0.18em] text-ivory/55 uppercase transition-colors duration-300 hover:text-orange-soft"
+              aria-label="Instagram"
+              className="text-ivory/55 transition-colors duration-300 hover:text-orange-soft"
             >
-              Instagram
+              <Instagram size={18} strokeWidth={1.5} />
+            </a>
+            <a
+              href="https://www.tiktok.com/@nothingbuthouse1?_r=1&_t=ZS-98xa8xqMpfh"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="TikTok"
+              className="text-ivory/55 transition-colors duration-300 hover:text-orange-soft"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden
+              >
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
+              </svg>
             </a>
             <span className="hidden h-3 w-px bg-ivory/15 sm:block" />
             <a
