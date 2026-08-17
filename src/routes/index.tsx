@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { Instagram } from "lucide-react";
 import AmbientAudio from "@/components/AmbientAudio";
 
 /* Images live in public/attached_assets so they resolve on any host */
