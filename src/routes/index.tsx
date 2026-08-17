@@ -292,23 +292,29 @@ function Index() {
               selectors with something to say.
             </p>
           </div>
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-2 sm:grid-cols-2 sm:gap-3 lg:grid-cols-4">
             {ARTISTS.map((a) => (
               <article
                 key={a.n}
-                className={`group relative aspect-[.78] overflow-hidden border border-ivory/10 bg-[#111111] p-5 transition-[transform,box-shadow,border-color] duration-700 ease-out hover:scale-[1.01] hover:border-orange/70 hover:shadow-[0_18px_45px_rgba(0,0,0,0.35)] ${a.offset}`}
+                className={`group relative h-[240px] overflow-hidden border border-ivory/10 bg-[#111111] p-4 transition-[transform,box-shadow,border-color] duration-700 ease-out hover:scale-[1.01] hover:border-orange/70 hover:shadow-[0_18px_45px_rgba(0,0,0,0.35)] sm:aspect-[.78] sm:h-auto sm:p-5 ${a.offset}`}
               >
                 <div
                   className="absolute inset-0 opacity-75 transition-[transform,opacity] duration-700 ease-out group-hover:scale-110 group-hover:opacity-90"
                   style={{ background: a.grad }}
                 />
+                <div
+                  aria-hidden
+                  className="pointer-events-none absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-ink/85 via-ink/40 to-transparent sm:h-1/2"
+                />
                 <div className="relative flex h-full flex-col justify-between">
-                  <span className="font-grotesk text-xs font-semibold text-ink">{a.n}</span>
+                  <span className="font-grotesk text-xs font-semibold text-ink drop-shadow-[0_1px_2px_rgba(0,0,0,0.7)]">
+                    {a.n}
+                  </span>
                   <div>
-                    <h3 className="font-grotesk text-3xl leading-none font-semibold tracking-[-.06em] text-ivory uppercase transition-colors duration-500 group-hover:text-orange-soft">
+                    <h3 className="font-grotesk text-2xl leading-none font-semibold tracking-[-.06em] text-ivory uppercase transition-colors duration-500 group-hover:text-orange-soft sm:text-3xl">
                       {a.name}
                     </h3>
-                    <p className="mt-2 text-[9px] tracking-[.18em] text-ivory/75 uppercase">
+                    <p className="mt-1 text-[9px] tracking-[.18em] text-ivory/75 uppercase sm:mt-2">
                       {a.from}
                     </p>
                   </div>
