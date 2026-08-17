@@ -11,24 +11,24 @@ const wordmarkSrc = "/attached_assets/nbh-wordmark.png";
 const ARTISTS = [
   {
     n: "01",
+    name: "Mphoza",
+    from: "Johannesburg",
+    grad: "radial-gradient(circle at 45% 72%, #FB2610, #111111 62%)",
+    offset: "",
+  },
+  {
+    n: "02",
     name: "THE MOB HOUSE DJS",
     from: "NAIROBI",
     grad: "radial-gradient(circle at 35% 28%, #FC8210, #111111 62%)",
     offset: "",
   },
   {
-    n: "02",
+    n: "03",
     name: "MASSH",
     from: "GLOBAL",
     grad: "radial-gradient(circle at 65% 24%, #FCAD37, #111111 62%)",
     offset: "lg:translate-y-12",
-  },
-  {
-    n: "03",
-    name: "Mphoza",
-    from: "Johannesburg",
-    grad: "radial-gradient(circle at 45% 72%, #FB2610, #111111 62%)",
-    offset: "",
   },
   {
     n: "04",
