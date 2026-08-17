@@ -172,7 +172,7 @@ function Index() {
         <div className="relative z-10 px-5 pt-6 sm:px-9 sm:pt-8 lg:px-14">
           <div className="flex items-center justify-between border-b border-ivory/15 pb-5">
             <a href="#event" aria-label="Nothing But House home" className="inline-flex">
-              <img src={logoSrc} alt="NBH monogram logo" className="h-8 w-auto sm:h-10" />
+              <img src={logoSrc} alt="NBH monogram logo" className="h-[45px] w-auto sm:h-14" />
             </a>
             <nav className="flex items-center gap-8 font-grotesk text-[10px] tracking-[0.28em] text-ivory/85">
               <a
