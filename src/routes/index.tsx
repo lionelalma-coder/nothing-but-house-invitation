@@ -327,14 +327,8 @@ function Index() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="bg-ink px-5 py-20 sm:px-9 sm:py-28 lg:px-14">
-        <div className="mx-auto flex max-w-7xl flex-col items-center gap-8 text-center">
-          <span className="h-px w-10 bg-orange" />
-          <p className="max-w-xl font-grotesk text-2xl leading-[1.05] font-semibold tracking-[-.03em] text-ivory sm:text-4xl">
-            The rhythm begins November 2026.
-            <br />
-            <span className="text-orange">Be there when it does.</span>
-          </p>
+      <section className="bg-ink">
+        <div className="mx-auto flex max-w-7xl items-center justify-center">
           <a
             href={TICKET_URL}
             target="_blank"
