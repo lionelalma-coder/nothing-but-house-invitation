@@ -225,7 +225,7 @@ function Index() {
               <a
                 href={TICKET_URL}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener"
                 className="group flex items-center gap-4 bg-orange px-5 py-4 font-grotesk text-[10px] font-semibold tracking-[.18em] text-ink transition-[transform,background-color,box-shadow] duration-500 ease-out hover:-translate-y-1 hover:bg-orange-soft hover:shadow-[0_16px_34px_rgba(252,130,16,0.22)] active:translate-y-0"
               >
                 GET TICKETS
@@ -345,8 +345,8 @@ function Index() {
             <a
               href="https://www.instagram.com/nothingbuthse?igsh=NzllMGk0NjFzb2Nz&utm_source=qr"
               target="_blank"
-              rel="noreferrer"
-              aria-label="Instagram"
+              rel="noopener"
+              aria-label="Instagram — Nothing But House"
               className="text-ivory/55 transition-colors duration-300 hover:text-orange-soft"
             >
               <Instagram size={18} strokeWidth={1.5} />
@@ -354,8 +354,8 @@ function Index() {
             <a
               href="https://www.tiktok.com/@nothingbuthouse1?_r=1&_t=ZS-98xa8xqMpfh"
               target="_blank"
-              rel="noreferrer"
-              aria-label="TikTok"
+              rel="noopener"
+              aria-label="TikTok — Nothing But House"
               className="text-ivory/55 transition-colors duration-300 hover:text-orange-soft"
             >
               <svg
