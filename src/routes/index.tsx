@@ -327,14 +327,22 @@ function Index() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="bg-ink">
+      <section className="bg-ink py-10">
         <div className="mx-auto flex max-w-7xl items-center justify-center">
           <a
             href={TICKET_URL}
             target="_blank"
             rel="noopener"
-            className="group inline-flex items-center gap-3 border-b border-orange/40 pb-1 font-grotesk text-[11px] font-semibold tracking-[.22em] text-ivory uppercase transition-colors duration-300 hover:text-orange-soft hover:border-orange"
+            className="nbh-cta group relative inline-flex items-center gap-3 pb-1.5 font-grotesk text-[11px] font-semibold tracking-[.22em] text-ivory uppercase outline-none transition-[color,letter-spacing] duration-500 ease-out hover:text-orange-soft hover:tracking-[.28em] focus-visible:text-orange-soft focus-visible:tracking-[.28em]"
           >
+            <span
+              aria-hidden
+              className="pointer-events-none absolute -inset-x-3 -inset-y-1.5 bg-orange/0 transition-colors duration-500 ease-out group-hover:bg-orange/[0.06] group-focus-visible:bg-orange/[0.06]"
+            />
+            <span
+              aria-hidden
+              className="absolute inset-x-0 bottom-0 h-px origin-left scale-x-0 bg-gradient-to-r from-orange via-orange-soft to-orange transition-transform duration-500 ease-out group-hover:scale-x-100 group-focus-visible:scale-x-100"
+            />
             Get Tickets
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -347,7 +355,7 @@ function Index() {
               strokeLinecap="round"
               strokeLinejoin="round"
               aria-hidden
-              className="transition-transform duration-500 ease-out group-hover:translate-x-1"
+              className="transition-transform duration-500 ease-out group-hover:translate-x-1.5 group-focus-visible:translate-x-1.5"
             >
               <path d="M5 12h14" />
               <path d="m12 5 7 7-7 7" />
