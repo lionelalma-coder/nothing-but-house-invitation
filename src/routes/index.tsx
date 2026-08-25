@@ -354,8 +354,8 @@ function Index() {
             <a
               href="https://www.tiktok.com/@nothingbuthouse1?_r=1&_t=ZS-98xa8xqMpfh"
               target="_blank"
-              rel="noreferrer"
-              aria-label="TikTok"
+              rel="noopener"
+              aria-label="TikTok — Nothing But House"
               className="text-ivory/55 transition-colors duration-300 hover:text-orange-soft"
             >
               <svg
