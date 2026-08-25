@@ -326,6 +326,42 @@ function Index() {
         </div>
       </section>
 
+      {/* FINAL CTA */}
+      <section className="bg-ink px-5 py-20 sm:px-9 sm:py-28 lg:px-14">
+        <div className="mx-auto flex max-w-7xl flex-col items-center gap-8 text-center">
+          <span className="h-px w-10 bg-orange" />
+          <p className="max-w-xl font-grotesk text-2xl leading-[1.05] font-semibold tracking-[-.03em] text-ivory sm:text-4xl">
+            The rhythm begins November 2026.
+            <br />
+            <span className="text-orange">Be there when it does.</span>
+          </p>
+          <a
+            href={TICKET_URL}
+            target="_blank"
+            rel="noopener"
+            className="group inline-flex items-center gap-3 border-b border-orange/40 pb-1 font-grotesk text-[11px] font-semibold tracking-[.22em] text-ivory uppercase transition-colors duration-300 hover:text-orange-soft hover:border-orange"
+          >
+            Get Tickets
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden
+              className="transition-transform duration-500 ease-out group-hover:translate-x-1"
+            >
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </section>
+
       {/* FOOTER */}
       <footer className="border-t border-ivory/10 bg-ink/80 px-5 py-14 backdrop-blur-sm sm:px-9 sm:py-16 lg:px-14">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 md:flex-row md:items-start">
