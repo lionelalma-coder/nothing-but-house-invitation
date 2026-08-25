@@ -225,7 +225,7 @@ function Index() {
               <a
                 href={TICKET_URL}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener"
                 className="group flex items-center gap-4 bg-orange px-5 py-4 font-grotesk text-[10px] font-semibold tracking-[.18em] text-ink transition-[transform,background-color,box-shadow] duration-500 ease-out hover:-translate-y-1 hover:bg-orange-soft hover:shadow-[0_16px_34px_rgba(252,130,16,0.22)] active:translate-y-0"
               >
                 GET TICKETS
