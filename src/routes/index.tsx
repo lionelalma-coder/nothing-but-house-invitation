@@ -345,8 +345,8 @@ function Index() {
             <a
               href="https://www.instagram.com/nothingbuthse?igsh=NzllMGk0NjFzb2Nz&utm_source=qr"
               target="_blank"
-              rel="noreferrer"
-              aria-label="Instagram"
+              rel="noopener"
+              aria-label="Instagram — Nothing But House"
               className="text-ivory/55 transition-colors duration-300 hover:text-orange-soft"
             >
               <Instagram size={18} strokeWidth={1.5} />
