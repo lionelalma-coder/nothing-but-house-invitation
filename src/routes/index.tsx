@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Download, Instagram } from "lucide-react";
 import AmbientAudio from "@/components/AmbientAudio";
-import pressKitAsset from "@/assets/nbh-brand-guidelines.pdf.asset.json";
 
 /* Images live in public/attached_assets so they resolve on any host */
 const heroSrc = "/attached_assets/nbh-bg.jpg";
@@ -190,7 +189,7 @@ function Index() {
                 ARTISTS
               </a>
               <a
-                href={pressKitAsset.url}
+                href="/attached_assets/nbh-brand-guidelines.pdf"
                 target="_blank"
                 rel="noopener"
                 aria-label="Open Nothing But House brand guidelines press kit PDF"
