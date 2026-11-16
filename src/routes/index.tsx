@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Instagram } from "lucide-react";
+import { Download, Instagram } from "lucide-react";
 import AmbientAudio from "@/components/AmbientAudio";
+import pressKitAsset from "@/assets/nbh-brand-guidelines.pdf.asset.json";
 
 /* Images live in public/attached_assets so they resolve on any host */
 const heroSrc = "/attached_assets/nbh-bg.jpg";
@@ -175,7 +176,7 @@ function Index() {
             <a href="#event" aria-label="Nothing But House home" className="inline-flex">
               <img src={logoSrc} alt="NBH monogram logo" className="h-[72px] w-auto sm:h-[90px]" />
             </a>
-            <nav className="flex items-center gap-8 font-grotesk text-[10px] tracking-[0.28em] text-ivory/85">
+            <nav className="flex items-center gap-4 font-grotesk text-[10px] tracking-[0.28em] text-ivory/85 sm:gap-8">
               <a
                 href="#event"
                 className="transition-colors duration-300 ease-out hover:text-orange-soft"
@@ -187,6 +188,16 @@ function Index() {
                 className="transition-colors duration-300 ease-out hover:text-orange-soft"
               >
                 ARTISTS
+              </a>
+              <a
+                href={pressKitAsset.url}
+                target="_blank"
+                rel="noopener"
+                aria-label="Open Nothing But House brand guidelines press kit PDF"
+                className="inline-flex items-center gap-2 border border-ivory/30 px-3 py-2 text-ivory transition-colors duration-300 ease-out hover:border-orange hover:text-orange-soft sm:px-4"
+              >
+                <Download size={12} aria-hidden="true" />
+                PRESS KIT
               </a>
             </nav>
           </div>
